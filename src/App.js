@@ -9,7 +9,8 @@ export default function App() {
     const Enviar = () => {
       axios.post("https://apiemailer.herokuapp.com/enviar", 
       {email: email,
-      editor: editorRef.current.getContent()})
+      editor: editorRef.current.getContent()}).then((res) => {
+        alert(res.data.mensagem)
   };
 
   return (
