@@ -11,6 +11,7 @@ export default function App() {
       {email: email,
       editor: editorRef.current.getContent()}).then((res) => {
         alert(res.data.mensagem)
+      })
   };
 
   return (
