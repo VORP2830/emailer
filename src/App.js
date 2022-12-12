@@ -7,7 +7,7 @@ export default function App() {
     const editorRef = useRef(null);
     const [email, setemail] = useState("")
     const Enviar = () => {
-      axios.post(`${REACT_APP_URL}/enviar`, 
+      axios.post(`https://api-emailer.up.railway.app/enviar`, 
       {email: email,
       editor: editorRef.current.getContent()}).then((res) => {
         alert(res.data.mensagem)
