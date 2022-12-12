@@ -7,7 +7,7 @@ export default function App() {
     const editorRef = useRef(null);
     const [email, setemail] = useState("")
     const Enviar = () => {
-      axios.post("https://apiemailer.herokuapp.com/enviar", 
+      axios.post(`${REACT_APP_URL}/enviar`, 
       {email: email,
       editor: editorRef.current.getContent()}).then((res) => {
         alert(res.data.mensagem)
